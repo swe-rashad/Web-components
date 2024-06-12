@@ -24,7 +24,7 @@ class EmployeeManager {
 
     async showUsers(search = '') {
         try {
-            const response = await fetch("/employeeListMock.json");
+            const response = await fetch("mocks/employeeList.json");
             const data = await response.json();
             
             const filteredUsers = data.filter(user => user.name.startsWith(search));

@@ -3,7 +3,7 @@
 
 - **Assets/images**: This directory contains images used in the project.
 - **Components/User.js**: This file contains the definition of the `UserCard` web component.
-- **employeeListMock.json**: This file contains the mock employee data in JSON format.
+- **Mocks/employeeList.json**: This file contains the mock employee data in JSON format.
 - **scripts/define.js**: This script defines the `user-card` component and registers it with the custom elements registry.
 - **scripts/main.js**: This script is the main entry point of the application. It handles the loading of employee data, rendering of `user-card` elements, and the search functionality.
 - **style/style.css**: This file contains global styles for the application.
