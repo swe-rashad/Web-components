@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Web Components | Rashad Yusifov</title>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="content-box">
+            <h1 class="main-title">Employee list of company 👤</h1>
+            <div class="search-box">
+                <input type="search" id="searchInput" placeholder="Search employee by name 🔍">
+            </div>
+            <div class="divider"></div>
+
+
+           <div class="employee-list">
+           </div>
+
+           <div class="empty-state">
+                <p class="not-found">
+                    404 NOT FOUND
+                </p>
+                <p class="description-state">
+                    We cannot find employee on list :(
+                </p>
+           </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script defer type="module" src="./scripts/define.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

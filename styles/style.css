@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    background-image: url('../assets/images/decore.png');
+}
+section {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    overflow-y: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    & .main-title{
+        margin-bottom: 24px;
+        font-size: 2.4rem;
+        color: #000;
+    }
+    & .content-box{
+        max-width: 600px;
+        margin: 0 auto;
+        & .divider{
+            margin-bottom: 24px;
+        }
+        & .empty-state{
+            display: none;
+            padding-top: 60px;
+            &.show{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 1.8rem;
+                align-items: center;
+                font-weight: bold;
+            }
+            & .not-found{
+                font-weight: bold;
+                text-align: center;
+                color: #000;
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+            & .description-state{
+                font-size: 1.6rem;
+                color: #000;
+            }
+        }
+        & .search-box{
+            width: 100%;
+            display: flex;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            align-items: center;
+            height: 64px;
+            background-color: white;
+            border-radius: 12px;
+            border: 2px solid #DFF5FF;
+            & input{
+                width: 100%;
+                height: 100%;
+                outline: none;
+                padding-left: 40px;
+                padding-right: 40px;
+                color: #000;
+                border: none;
+                border-radius: 12px;
+                font-size: 2.4rem;
+                margin-right: 12px;
+            }
+            & .search-btn{
+                width: 74px;
+                cursor: pointer;
+                height: 74px;
+                border-radius: 50%;
+                min-width: 74px;
+                margin-right: -10px;
+                border: none;
+                font-size: 2.8rem;
+                background-color: #67C6E3;
+                transition: 0.3s;
+                &:hover{
+                    transition: 0.3s;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
