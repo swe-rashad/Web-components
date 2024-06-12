@@ -65,8 +65,10 @@ template.innerHTML = `
             font-weight: bold;
             padding-right: 6px;
         }
-        .detail .value {
-            font-size: 1.8rem;
+        .detail  {
+            & .value {
+                font-size: 1.8rem;
+            }
         }
         .detail:last-child {
             border: none;
@@ -79,6 +81,26 @@ template.innerHTML = `
         }
         .profile-picture img {
             max-width: 100%;
+        }
+        @media screen and (max-width: 450px){
+            .detail {
+                & .value {
+                    font-size: 1.4rem;
+                }
+            }
+            .account-status{
+                font-size: 1.6rem;
+                height: 30px;
+            }
+            .card-body{
+                flex-direction: column;
+                padding-left: 12px;
+                padding-right: 12px;
+                & .profile-picture{
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                }
+            }
         }
     </style>
 

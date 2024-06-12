@@ -27,7 +27,7 @@ class EmployeeManager {
             const response = await fetch("mocks/employeeList.json");
             const data = await response.json();
             
-            const filteredUsers = data.filter(user => user.name.startsWith(search));
+            const filteredUsers = data.filter(user => user.name.toLowerCase().startsWith(search));
 
             if (filteredUsers.length === 0) {
                 this.showEmptyState();
@@ -46,7 +46,7 @@ class EmployeeManager {
     async searchUsers(event) {
         const search = event?.target?.value || '';
         this.clearEmployeeList();
-        await this.showUsers(search);
+        await this.showUsers(search.toLowerCase());
     }
 
   
@@ -74,4 +74,4 @@ const employeeManager = new EmployeeManager();
 employeeManager.init();
 
 // Attach search event handler to the search input field (assuming it has an id 'searchInput')
-document.getElementById('searchInput').addEventListener('change', (event) => employeeManager.searchUsers(event));
+document.getElementById('searchInput').addEventListener('input', (event) => employeeManager.searchUsers(event));
