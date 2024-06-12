@@ -152,7 +152,7 @@ export default class UserCard extends HTMLElement {
 
     setProfilePicture() {
         const gender = this.getAttribute('gender');
-        const imgSrc = gender === 'Male' ? '/assets/images/male.png' : '/assets/images/female.png';
+        const imgSrc = gender === 'Male' ? 'assets/images/male.png' : 'assets/images/female.png';
         this.shadowRoot.querySelector('.profile-picture img').src = imgSrc;
     }
 
